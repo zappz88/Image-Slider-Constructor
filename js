@@ -22,6 +22,7 @@ function imageArraySlider(array, String) {
             };
             this.removeCurrent = () => {
                 this.array.splice(this.count, 1);
+                this.array[this.count - 1] != null ? document.getElementById(String).src = this.array[this.count - 1] : document.getElementById(String).src = this.array[this.count + 1];
+                this.array[this.count - 1] == null ? document.getElementById(String).src = this.array[this.count] : document.getElementById(String).src = this.array[this.count + 1];
             };
-            this.cycle = setInterval(this.next, 3000);
         }
